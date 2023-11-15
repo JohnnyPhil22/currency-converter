@@ -10,7 +10,6 @@
 </head>
 
 <body>
-	<script src="script.js"></script>
 	<div class="dashboard">
 		<section class=" topnav">
 			<div>
@@ -18,8 +17,6 @@
 				<a href="/news.html">News</a>
 				<a href="/calculator.html">Calculator</a>
 				<a href="/history.html" class="split">History</a>
-
-
 			</div>
 		</section>
 		<section class="wrapper">
@@ -29,30 +26,17 @@
 			<label for="amount">Amount:</label>
 			<input type="number" id="amount" value="100">
 			<div class="dropdowns">
-				<select id="from-currency-select">
-					<option value="INR">INR</option>
-					<option value="USD">USD</option>
-					<option value="EUR">EUR</option>
-					<option value="GBP">GBP</option>
-					<option value="AED">AED</option>
-				</select>
-				<select id="to-currency-select">
-					<option value="USD">USD</option>
-					<option value="EUR">EUR</option>
-					<option value="GBP">GBP</option>
-					<option value="INR">INR</option>
-					<option value="AED">AED</option>
-				</select>
-
+				<select id="from-currency-select"></select>
+				<select id="to-currency-select"></select>
 			</div>
-			<button type="button" id="convert button">Convert</button>
+			<button type="button" id="convert">Convert</button>
 			<p id="result"> Result</p>
 		</section>
-
 		<div class="graph">
 			<h>GRAPH</h>
 		</div>
 	</div>
+	<script src="script.js"></script>
 </body>
 
 </html>
