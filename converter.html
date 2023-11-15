@@ -13,7 +13,7 @@
 	<div class="dashboard">
 		<section class=" topnav">
 			<div>
-				<a class="active" href="/index.html">Converter</a>
+				<a class="active" href="/converter.html">Converter</a>
 				<a href="/news.html">News</a>
 				<a href="/calculator.html">Calculator</a>
 				<a href="/history.html" class="split">History</a>
@@ -26,14 +26,18 @@
 			<label for="amount">Amount:</label>
 			<input type="number" id="amount" value="100">
 			<div class="dropdowns">
-				<select id="from-currency-select"></select>
-				<select id="to-currency-select"></select>
+				<select id="from-currency-select">
+					<option value='-SELECT-'>-SELECT-</option>
+				</select>
+				<select id="to-currency-select">
+					<option value='-SELECT-'>-SELECT-</option>
+				</select>
 			</div>
 			<button type="button" id="convert">Convert</button>
 			<p id="result"> Result</p>
 		</section>
 		<div class="graph">
-			<h>GRAPH</h>
+			GRAPH
 		</div>
 	</div>
 	<script src="script.js"></script>
