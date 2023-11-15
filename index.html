@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Currency Converter</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<script src="script.js"></script>
+	<div class="dashboard">
+		<section class=" topnav">
+			<div>
+				<a class="active" href="/index.html">Converter</a>
+				<a href="/news.html">News</a>
+				<a href="/calculator.html">Calculator</a>
+				<a href="/history.html" class="split">History</a>
+
+
+			</div>
+		</section>
+		<section class="wrapper">
+			<div>
+				<h class="title">CURRENCY CONVERTER</h>
+			</div>
+			<label for="amount">Amount:</label>
+			<input type="number" id="amount" value="100">
+			<div class="dropdowns">
+				<select id="from-currency-select">
+					<option value="INR">INR</option>
+					<option value="USD">USD</option>
+					<option value="EUR">EUR</option>
+					<option value="GBP">GBP</option>
+					<option value="AED">AED</option>
+				</select>
+				<select id="to-currency-select">
+					<option value="USD">USD</option>
+					<option value="EUR">EUR</option>
+					<option value="GBP">GBP</option>
+					<option value="INR">INR</option>
+					<option value="AED">AED</option>
+				</select>
+
+			</div>
+			<button type="button" id="convert button">Convert</button>
+			<p id="result"> Result</p>
+		</section>
+
+		<div class="graph">
+			<h>GRAPH</h>
+		</div>
+	</div>
+</body>
+
+</html>
