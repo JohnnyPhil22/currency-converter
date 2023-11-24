@@ -6,34 +6,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Calculator</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<style>
+		table {
+			border: 1px solid black;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		input[type="button"] {
+			width: 100%;
+			padding: 10px 20px;
+			background-color: blue;
+			color: white;
+			font-size: 12px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+		}
+
+		input[type="text"] {
+			padding: 10px 15px;
+			font-size: 12px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+			border: 2px solid black;
+		}
+	</style>
+	<script src="calculator.js" defer></script>
 </head>
-<style>
-	table {
-		border: 1px solid black;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	input[type="button"] {
-		width: 100%;
-		padding: 10px 20px;
-		background-color: blue;
-		color: white;
-		font-size: 12px;
-		font-weight: bold;
-		border: none;
-		border-radius: 5px;
-	}
-
-	input[type="text"] {
-		padding: 10px 15px;
-		font-size: 12px;
-		font-weight: bold;
-		border: none;
-		border-radius: 5px;
-		border: 2px solid black;
-	}
-</style>
 
 <body>
 	<section class=" topnav">
@@ -42,67 +43,70 @@
 			<a href="/news.html">News</a>
 			<a href="/calculator.html">Calculator</a>
 			<a href="/history.html" class="split">History</a>
-
-
 		</div>
 	</section>
-	<h> calculator</h>
+	<h1>Calculator</h1>
 	<div class="calculator">
 		<table id="calcu">
 			<tr>
-				<td colspan="3">
-					<input type="text" id="result">
+				<td colspan="2">
+					<input type="text" id="result" readonly>
 				</td>
-				<td><input type="button" value="c"></td>
+				<td><input type="button" value="C" onclick="clearResult()"></td>
+				<td><input type="button" value="/" onclick="appendToResult('/')"></td>
 			</tr>
 
 			<tr>
-				<td><input type="button" value="1"></td>
-				<td><input type="button" value="2"></td>
-				<td><input type="button" value="3"></td>
-				<td><input type="button" value="/"></td>
+				<td><input type="button" value="7" onclick="appendToResult('7')"></td>
+				<td><input type="button" value="8" onclick="appendToResult('8')"></td>
+				<td><input type="button" value="9" onclick="appendToResult('9')"></td>
+				<td><input type="button" value="*" onclick="appendToResult('*')"></td>
 			</tr>
+
 			<tr>
-				<td><input type="button" value="4"></td>
-				<td><input type="button" value="5"></td>
-				<td><input type="button" value="6"></td>
-				<td><input type="button" value="*"></td>
+				<td><input type="button" value="4" onclick="appendToResult('4')"></td>
+				<td><input type="button" value="5" onclick="appendToResult('5')"></td>
+				<td><input type="button" value="6" onclick="appendToResult('6')"></td>
+				<td><input type="button" value="-" onclick="appendToResult('-')"></td>
 			</tr>
+
 			<tr>
-				<td><input type="button" value="7"></td>
-				<td><input type="button" value="8"></td>
-				<td><input type="button" value="9"></td>
-				<td><input type="button" value="-"></td>
+				<td><input type="button" value="1" onclick="appendToResult('1')"></td>
+				<td><input type="button" value="2" onclick="appendToResult('2')"></td>
+				<td><input type="button" value="3" onclick="appendToResult('3')"></td>
+				<td><input type="button" value="+" onclick="appendToResult('+')"></td>
 			</tr>
+
 			<tr>
-				<td><input type="button" value="0"></td>
-				<td><input type="button" value="."></td>
-				<td><input type="button" value="="></td>
-				<td><input type="button" value="+"></td>
+				<td colspan="2"><input type="button" value="0" onclick="appendToResult('0')"></td>
+				<td><input type="button" value="." onclick="appendToResult('.')"></td>
+				<td><input type="button" value="=" onclick="calculateResult()"></td>
 			</tr>
 		</table>
-
 	</div>
+
 	<div class="interests">
-		<label for="interest">INTEREST:</label>
-		<input type="text" id="principal" value="principal">
-		<input type="text" id="time" value="time in years">
-		<input type="text" id="rate" value="rate">
+		<h1>Interest Calculator</h1>
+		<label for="principal">Principal:</label>
+		<input type="text" id="principal" placeholder="Enter principal">
+
+		<label for="time">Time (in years):</label>
+		<input type="text" id="time" placeholder="Enter time">
+
+		<label for="rate">Rate of Interest:</label>
+		<input type="text" id="rate" placeholder="Enter rate">
+
 		<div class="selection">
-
-			<label for="diff_interest"> Enter the type of
-				interest you want to find:</label>
-
-			<select name="Interest" id="int">
-				<option value="ci">Compound interest</option>
-				<option value="si">Simple interest</option>
-
+			<label for="intType">Select interest type:</label>
+			<select id="intType">
+				<option value="simple">Simple Interest</option>
+				<option value="compound">Compound Interest</option>
 			</select>
-
 		</div>
-		<button id="result button">FIND</button>
-		<p id="amount"> Amount:</p>
-		<p id="interest"> Interest:</p>
+
+		<button onclick="calculateInterest()">Calculate</button>
+
+		<p id="interestResult">Result</p>
 	</div>
 </body>
 
