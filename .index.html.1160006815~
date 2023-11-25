@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Currency Converter</title>
+	<style>
+		body {
+			/* height: 100%;
+      width: 100%;
+      padding: 100%; */
+			background-image: url("https://img.pikbest.com/back_our/20220610/bg/7a548966f1ae8.png!w700wp");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-color: #6a5acd;
+			background-color: #f2f2f2;
+
+		}
+
+		h1 {
+			color: #ffebcd;
+		}
+
+		* {
+
+			font-family: 'Georgia', sans-serif;
+			text-align: center;
+			font-size: 40px;
+		}
+
+		#from-currency-select,
+		#to-currency-select {
+			
+			font-family: 'Georgia', sans-serif;
+		}
+
+		.amount1 {
+
+			font-family: cursive;
+			color: red;
+		}
+
+		#result {
+			color: #6b8e23;
+			font-family: cursive;
+		}
+
+		#convert {}
+
+		.topnav {
+			background-color: #4fc6d1;
+		}
+
+		h2 {
+			font-family: cursive;
+			color: #d8bfd8;
+		}
+
+		#history-list {
+			font-family: cursive;
+			color: grey;
+		}
+	</style>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div class="dashboard">
+		<section class=" topnav">
+			<div>
+				<a class="active" href="/index.html">Converter</a>
+				<a href="/news.html">News</a>
+				<a href="/calculator.html">Calculator</a>
+			</div>
+		</section>
+		<div class="wrapper">
+			<div>
+
+				<br>
+				<br>
+				<h1> Currency Converter</h1>
+			</div>
+			<div class="amount1">Amount:</div>
+			<input type="number" id="amount" placeholder="Enter value">
+			<p></p>
+			<div class="dropdowns">
+				<select id="from-currency-select">
+					<option value='-SELECT-'>-SELECT-</option>
+				</select>
+				<select id="to-currency-select">
+					<option value='-SELECT-'>-SELECT-</option>
+				</select>
+			</div>
+			<br>
+			<button type="button" id="convert">Convert</button>
+			<p id="result"> Result</p>
+			<div class="history">
+				<h2>History</h2>
+				<ul id="history-list"></ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

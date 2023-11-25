@@ -1,12 +1,74 @@
-html {
-  height: 100%;
-  width: 100%;
-  padding: 100%;
-  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20221111/pngtree-financial-stock-market-graph-on-stock-market-investment-trading-image_1456620.jpg");
-  background-color: #6a5acd;
-.wrapper{
-  h1{
-    color:
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #675AFE;
+  background-image: url("https://img.pikbest.com/back_our/20220610/bg/7a548966f1ae8.png!w700wp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+::selection {
+  color: #fff;
+  background: #675AFE;
+
+}
+
+.topnav {
+  width: 240px;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.wrapper {
+  width: 400px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.wrapper h1 {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.wrapper amount1 {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.wrapper dropdowns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+select {
+  margin-left: 39.5px;
+  margin-right: 35px;
+  font-size: 15px;
+}
+
+button {
+  margin: 0px 126px;
+  font-size: 20px;
 }

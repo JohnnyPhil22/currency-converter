@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #8b84da;
+  background-image: url("https://img.freepik.com/premium-photo/ethereal-linen-abstract-linen-hues-blur-light-airy-background_954894-5388.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+::selection {
+  color: #fff;
+  background: #8b84da;
+}
+
+.topnav {
+  width: 240px;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.calculator {
+  width: 400px;
+  padding: 30px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calculator h1 {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+table {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+input[type="button"] {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #FFD8B1;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-family: cursive;
+}
+
+input[type="text"] {
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-family: cursive;
+}
+
+.interests {
+  width: 1000px;
+  padding: 10px;
+  margin: auto;
+  text-align: justify;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.interests h1 {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#interestResult {
+  color: navy;
+}

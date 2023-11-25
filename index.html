@@ -5,59 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Currency Converter</title>
-	<!-- <link href="style.css" rel="stylesheet" type="
-  /css" /> -->
-	<style>
-		body {
-			/* height: 100%;
-      width: 100%;
-      padding: 100%; */
-			background-image: url("https://img.pikbest.com/back_our/20220610/bg/7a548966f1ae8.png!w700wp");
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-color: #6a5acd;
-			background-color: #f2f2f2;
-
-		}
-
-		h1 {
-			color: #ffebcd;
-		}
-
-		* {
-
-			font-family: 'Georgia', sans-serif;
-			text-align: center;
-			font-size: 40px;
-		}
-
-		#from-currency-select,
-		#to-currency-select {
-			width: 150px;
-			padding: 10px;
-			font-size: 8px;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			box-sizing: border-box;
-			font-family: 'Georgia', sans-serif;
-		}
-
-		.amount1 {
-
-			font-family: cursive;
-			color: red;
-		}
-
-		#result {
-			color: #6b8e23;
-		}
-
-		#convert {}
-
-		.topnav {
-			background-color: #4fc6d1;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -68,18 +16,18 @@
 				<a class="active" href="/index.html">Converter</a>
 				<a href="/news.html">News</a>
 				<a href="/calculator.html">Calculator</a>
-				<a href="/history.html" class="split">History</a>
 			</div>
 		</section>
+		<br>
 		<div class="wrapper">
 			<div>
-
-				<br>
-				<br>
-				<h1> CURRENCY CONVERTER</h1>
+				<h1> Currency Converter</h1>
 			</div>
-			<div class="amount1">Amount:</div>
-			<input type="number" id="amount" value="100">
+			<br>
+			<div class="amount1">
+				Amount: <input type="number" id="amount" placeholder="Enter value">
+			</div>
+			<br>
 			<div class="dropdowns">
 				<select id="from-currency-select">
 					<option value='-SELECT-'>-SELECT-</option>
@@ -90,9 +38,18 @@
 			</div>
 			<br>
 			<button type="button" id="convert">Convert</button>
-			<p id="result"> Result</p>
+			<h2>
+				<p id="result" align="center">Result</p>
+			</h2>
+			<div class="history">
+				<h2>
+					<p align="center">History</p>
+				</h2>
+				<ul id="history-list"></ul>
+			</div>
 		</div>
 	</div>
+
 	<script src="script.js"></script>
 </body>
 
